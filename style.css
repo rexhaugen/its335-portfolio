@@ -89,10 +89,11 @@ header a {
     text-decoration: none;
     padding: 0.5rem;
     border-radius: 0.3rem;
+    color: black;
 }
 header a:visited {
     text-decoration: none;
-    color: inherit;
+    color: black;
 }
 
 header a:hover {
