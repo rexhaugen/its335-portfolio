@@ -15,6 +15,10 @@ section h3 {
     width: 100%;
 }
 
+.symbol {
+    font-family: "Noto Sans Symbols 2";
+}
+
 /* Page width */
 
 body {
