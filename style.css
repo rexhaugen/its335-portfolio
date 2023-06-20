@@ -48,6 +48,10 @@ hr {
         height: 160px;
         margin-top: -160px;
     }
+
+    section#Welcome summary img {
+        width: 100%;
+    }
 }
 
 @media (min-width: 400px) and (max-width: 679px) {
@@ -61,6 +65,10 @@ hr {
         height: 130px;
         margin-top: -130px;
     }
+
+    section#Welcome summary img {
+        width: 100%;
+    }
 }
 
 @media (min-width: 680px) {
@@ -73,6 +81,10 @@ hr {
     section[id]::before {
         height: 100px;
         margin-top: -100px;
+    }
+
+    section#Welcome summary img {
+        width: 50%;
     }
 }
 
@@ -150,9 +162,7 @@ div.column {
 
 /* Images */
 
-section#Welcome aside img {
-    max-width: 40%;
-    min-width: 280px;
+section#Welcome summary img {
     float: left;
     margin: 1rem;
 }
