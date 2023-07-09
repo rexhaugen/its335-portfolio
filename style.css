@@ -123,42 +123,10 @@ div.column {
 
 /* Images */
 
-section#Welcome summary img {
+section#Welcome img {
     float: left;
     margin: 1rem;
 }
-
-/*  Not currently used
-
-section#Ingredients aside img {
-    max-width: 40%;
-    min-width: 280px;
-    float: right;
-    margin: 1rem;
-}
-
-section#Cake aside img {
-    max-width: 40%;
-    min-width: 280px;
-    float: left;
-    margin: 1rem;
-}
-
-section#Topping aside img {
-    max-width: 40%;
-    min-width: 280px;
-    float: right;
-    margin: 1rem;
-}
-
-section#Serving aside img {
-    max-width: 40%;
-    min-width: 280px;
-    float: left;
-    margin: 1rem;
-} 
-
-*/
 
 /* Footer */
 
@@ -232,7 +200,7 @@ img {
         margin-top: -160px;
     }
 
-    section#Welcome summary img {
+    section#Welcome img {
         width: 100%;
         margin: 1rem 0;
     }
@@ -258,7 +226,7 @@ img {
         margin-top: -130px;
     }
 
-    section#Welcome summary img {
+    section#Welcome img {
         width: auto;
         margin: 1rem;
         max-height: 300px;
@@ -286,7 +254,7 @@ img {
         margin-top: -100px;
     }
 
-    section#Welcome summary img {
+    section#Welcome img {
         width: 50%;
     }
 
