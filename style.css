@@ -1,13 +1,14 @@
 /* CSS file for Rum Apple Cake recipe site */
 /* Author: Rexford Haugen */
-/* Date Modified: 2023-06-18 */
+/* Date Modified: 2023-07-09 */
 
 /* Default Styles */
 
 body {
     /* Apply default Google Font for body */
     font-family: "Noto Serif", 'Times New Roman', Times, serif;
-    background-color: white;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 section h3 {
@@ -19,11 +20,27 @@ section h3 {
     font-family: "Noto Sans Symbols 2";
 }
 
+img {
+    width: 100%;
+    border-radius: 10%;
+    border-style: solid;
+    border-width: 0.2rem;
+}
+
+p.picture-description {
+    margin-top: 0.25rem;
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
 /* Page width */
 
 body {
     max-width: 1000px;
-    min-width: 360px;
+    min-width: calc(360px - 2rem);
     padding: 0 1rem;
     margin: auto;
     min-height: 100vh;
@@ -35,67 +52,13 @@ hr {
     min-width: 280px;
 }
 
-/* Media queries */
-
-@media (max-width: 399px) {
-
-    /* Set increased header height */
-    header {
-        height: 160px;
-    }
-
-    section[id]::before {
-        height: 160px;
-        margin-top: -160px;
-    }
-
-    section#Welcome summary img {
-        width: 100%;
-    }
-}
-
-@media (min-width: 400px) and (max-width: 679px) {
-
-    /* Set increased header height */
-    header {
-        height: 130px;
-    }
-
-    section[id]::before {
-        height: 130px;
-        margin-top: -130px;
-    }
-
-    section#Welcome summary img {
-        width: 100%;
-    }
-}
-
-@media (min-width: 680px) {
-
-    /* Set standard header height */
-    header {
-        height: 100px;
-    }
-
-    section[id]::before {
-        height: 100px;
-        margin-top: -100px;
-    }
-
-    section#Welcome summary img {
-        width: 50%;
-    }
-}
-
 /* Header */
 
 header {
     text-align: center;
     position: sticky;
     top: 0;
-    background-color: inherit;
-    border-bottom-color: black;
+    background: inherit;
     border-bottom-width: 0.1rem;
     border-bottom-style: dashed;
     z-index: 100;
@@ -105,15 +68,9 @@ header a {
     text-decoration: none;
     padding: 0.5rem;
     border-radius: 0.3rem;
-    color: black;
 }
 header a:visited {
     text-decoration: none;
-    color: black;
-}
-
-header a:hover {
-    background-color: gainsboro;
 }
 
 header hr {
@@ -123,6 +80,10 @@ header hr {
 }
 
 /* Navigation */
+
+header nav ul {
+    padding: 0;
+}
 
 header nav ul li {
     display: inline;
@@ -167,6 +128,8 @@ section#Welcome summary img {
     margin: 1rem;
 }
 
+/*  Not currently used
+
 section#Ingredients aside img {
     max-width: 40%;
     min-width: 280px;
@@ -193,11 +156,145 @@ section#Serving aside img {
     min-width: 280px;
     float: left;
     margin: 1rem;
-}
+} 
+
+*/
 
 /* Footer */
 
 footer p {
     /* Center align footer text */
     text-align: center;
+}
+
+/* Colors */
+
+section h3, nav h1 {
+    color: darkslategray;
+}
+
+.symbol {
+    color: darkgreen;
+}
+
+strong {
+    color: midnightblue;
+}
+
+body {
+    background-color: papayawhip;
+    background-image: radial-gradient(circle, floralwhite 25%, papayawhip 75%);
+}
+
+header {
+    border-bottom-color: black;
+}
+
+header a, header a:visited {
+    color: black;
+}
+
+header a:hover {
+    background: gainsboro;
+}
+
+img {
+    border-color: darkslategray;
+}
+
+/* Media queries */
+
+@media (max-width: 589px) {
+
+    /* Move photos below text for mobile */
+    div.column.mob-hid {
+        display: none;
+    }
+}
+
+@media (min-width: 590px) {
+
+    /* Allow photos to flip-flop between sections */
+    div.column.mob-vis {
+        display: none;
+    }
+}
+
+@media (max-width: 399px) {
+
+    /* Set increased header height */
+    header {
+        height: 160px;
+    }
+
+    section[id]::before {
+        height: 160px;
+        margin-top: -160px;
+    }
+
+    section#Welcome summary img {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    div.column.narrow {
+        width: 100%;
+    }
+
+    div.column.wide {
+        width: 100%;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 679px) {
+
+    /* Set increased header height */
+    header {
+        height: 130px;
+    }
+
+    section[id]::before {
+        height: 130px;
+        margin-top: -130px;
+    }
+
+    section#Welcome summary img {
+        width: auto;
+        margin: 1rem;
+        max-height: 300px;
+        max-width: calc(100% - 2rem);
+    }
+
+    div.column.narrow {
+        width: 33%;
+    }
+
+    div.column.wide {
+        width: 67%;
+    }
+}
+
+@media (min-width: 680px) {
+
+    /* Set standard header height */
+    header {
+        height: 100px;
+    }
+
+    section[id]::before {
+        height: 100px;
+        margin-top: -100px;
+    }
+
+    section#Welcome summary img {
+        width: 50%;
+    }
+
+    div.column.narrow {
+        width: 33%;
+    }
+
+    div.column.wide {
+        width: 67%;
+    }
 }

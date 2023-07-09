@@ -44,7 +44,12 @@
                 <h3>Welcome!</h3>
                 <summary>
                     <p>
-                        <img src="images/hero.jpg" alt="Photo of completed rum cake with glazed apples on top.">
+                        <picture aria-describedby="cake-ingredients">
+                            <source srcset="images/full/00-hero.jpg" media="(min-width: 680px)" />
+                            <source srcset="images/half/00-hero.jpg" media="(min-width: 400px)" />
+                            <img src="images/quarter/00-hero.jpg" alt="Photo of completed rum cake with glazed apples on top." loading="lazy">
+                        </picture>
+                        <span style="display: none;">Photo of completed rum cake with glazed apples on top.</span><!-- Hidden description for screen readers -->
                         When it comes to recipes, this one for a spiced rum apple cake is a favorite of mine.  It's a great way to use up extra apples from the tree in my yard using ingredients I usually have on hand.  The cake is moist and flavorful, with a hint of spice from cinnamon and nutmeg.  The spiced rum adds a touch of sweetness and complexity.  This cake is perfect for a fall gathering or a winter holiday dessert.
                     </p>
                 </summary>
@@ -53,7 +58,7 @@
             <section id="Ingredients">
                 <h3>Ingredients</h3>
                 <div class="table">
-                    <div class="column">
+                    <div class="column wide">
                         <h5>Cake</h5>
                         <ul>
                             <li>All purpose flour &mdash; 2 cups</li>
@@ -75,8 +80,8 @@
                             <li>Cinnamon &mdash; 1 stick</li>
                             <li>Water &mdash; 1 cup</li>
                         </ul>
-                    </div>
-                    <div class="column">
+                    <!--</div>
+                    <div class="column">-->
                         <h5>Tools</h5>
                         <ul>
                             <li>9 inch spring form cake pan</li>
@@ -93,54 +98,216 @@
                             <li>Fork</li>
                         </ul>
                     </div>
+                    <div class="column narrow">
+                        <div>
+                            <picture>
+                                <source srcset="images/full/01-cake-ingredients.jpg" media="(min-width: 680px)" />
+                                <source srcset="images/half/01-cake-ingredients.jpg" media="(min-width: 400px)" />
+                                <img src="images/quarter/01-cake-ingredients.jpg" alt="Ingredients for the cake." aria-describedby="cake-ingredients" loading="lazy">
+                            </picture>
+                            <p class="picture-description" id="cake-ingredients">Ingredients for the cake.</p>
+                        </div>
+                        <br>
+                        <div>
+                            <picture>
+                                <source srcset="images/full/02-apple-topping-ingredients.jpg" media="(min-width: 680px)" />
+                                <source srcset="images/half/02-apple-topping-ingredients.jpg" media="(min-width: 400px)" />
+                                <img src="images/quarter/02-apple-topping-ingredients.jpg" alt="Ingredients for the apple topping." aria-describedby="apple-topping-ingredients" loading="lazy">
+                            </picture>
+                            <p class="picture-description" id="apple-topping-ingredients">Ingredients for the apple topping.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
             <hr>
             <section id="Cake">
                 <h3>Making the cake</h3>
-                <p>The cake is an <strong>olive oil cake</strong> that will be baked in a spring-form pan.  Making the cake:</p>
-                <ol>
-                    <li><span class="symbol">🌡</span>&nbsp;<strong>Preheat oven</strong> to 350 F</li>
-                    <li><span class="symbol">🪔</span>&nbsp;<strong>Combine dry ingredients</strong> in a mixing bowl</li>
-                    <li><span class="symbol">🪔</span>&nbsp;<strong>Add wet ingredients</strong> to the mixing bowl</li>
-                    <li><span class="symbol">⭯</span>&nbsp;<strong>Blend ingredients</strong> until uniform</li>
-                    <li><span class="symbol">♨</span>&nbsp;<strong>Spray spring-form pan</strong> with baking spray</li>
-                    <li><span class="symbol">♨</span>&nbsp;<strong>Pour batter</strong> into pan</li>
-                    <li><span class="symbol">⏱</span>&nbsp;<strong>Bake for 20-25</strong> minutes
-                        <aside><span class="symbol">🗭</span>&nbsp;<em>To check if the cake is done, a butter knife can be inserted into the center and the cake is done when it pulls out cleanly.</em></aside>
-                    </li>
-                    <li><span class="symbol">⏻</span>&nbsp;<strong>Turn off the oven</strong> after removing the cake</li>
-                </ol>
-                <p>While the cake is baking, the topping can be made.</p>
+                <div class="table">
+                    <div class="column narrow mob-hid">
+                        <div>
+                            <picture>
+                                <source srcset="images/full/05-checking-consistency.jpg" media="(min-width: 680px)" />
+                                <source srcset="images/half/05-checking-consistency.jpg" media="(min-width: 400px)" />
+                                <img src="images/quarter/05-checking-consistency.jpg" alt="Checking the batter consistency." aria-describedby="cake-ingredients" loading="lazy">
+                            </picture>
+                            <p class="picture-description" id="checking-consistency">Checking the batter consistency</p>
+                        </div>
+                        <br>
+                        <div>
+                            <picture>
+                                <source srcset="images/full/06-filling-pan.jpg" media="(min-width: 680px)" />
+                                <source srcset="images/half/06-filling-pan.jpg" media="(min-width: 400px)" />
+                                <img src="images/quarter/06-filling-pan.jpg" alt="Batter poured into cake pan." aria-describedby="filling-pan" loading="lazy">
+                            </picture>
+                            <p class="picture-description" id="filling-pan">Batter poured into cake pan</p>
+                        </div>
+                        <br>
+                        <div>    
+                            <picture>
+                                <source srcset="images/full/12-checking-cake.jpg" media="(min-width: 680px)" />
+                                <source srcset="images/half/12-checking-cake.jpg" media="(min-width: 400px)" />
+                                <img src="images/quarter/12-checking-cake.jpg" alt="Checking the bake of the cake." aria-describedby="checking-cake" loading="lazy">
+                            </picture>
+                            <p class="picture-description" id="checking-cake">Checking the bake of the cake</p>
+                        </div>
+                    </div>
+                    <div class="column wide">
+                        <p>The cake is an <strong>olive oil cake</strong> that will be baked in a spring-form pan.  Making the cake:</p>
+                        <ol>
+                            <li><span class="symbol">🌡</span>&nbsp;<strong>Preheat oven</strong> to 350 F</li>
+                            <li><span class="symbol">🪔</span>&nbsp;<strong>Combine dry ingredients</strong> in a mixing bowl</li>
+                            <li><span class="symbol">🪔</span>&nbsp;<strong>Add wet ingredients</strong> to the mixing bowl</li>
+                            <li><span class="symbol">⭯</span>&nbsp;<strong>Blend ingredients</strong> until uniform</li>
+                            <li><span class="symbol">♨</span>&nbsp;<strong>Spray spring-form pan</strong> with baking spray</li>
+                            <li><span class="symbol">♨</span>&nbsp;<strong>Pour batter</strong> into pan</li>
+                            <li><span class="symbol">⏱</span>&nbsp;<strong>Bake for 20-25</strong> minutes
+                                <aside><span class="symbol">🗭</span>&nbsp;<em>To check if the cake is done, a butter knife can be inserted into the center and the cake is done when it pulls out cleanly.</em></aside>
+                            </li>
+                            <li><span class="symbol">⏻</span>&nbsp;<strong>Turn off the oven</strong> after removing the cake</li>
+                        </ol>
+                        <p>While the cake is baking, the topping can be made.</p>
+                    </div>
+                    <div class="column narrow mob-vis">
+                        <div>
+                            <picture>
+                                <source srcset="images/full/05-checking-consistency.jpg" media="(min-width: 680px)" />
+                                <source srcset="images/half/05-checking-consistency.jpg" media="(min-width: 400px)" />
+                                <img src="images/quarter/05-checking-consistency.jpg" alt="Checking the batter consistency." aria-describedby="cake-ingredients-mob" loading="lazy">
+                            </picture>
+                            <p class="picture-description" id="checking-consistency-mob">Checking the batter consistency</p>
+                        </div>
+                        <br>
+                        <div>
+                            <picture>
+                                <source srcset="images/full/06-filling-pan.jpg" media="(min-width: 680px)" />
+                                <source srcset="images/half/06-filling-pan.jpg" media="(min-width: 400px)" />
+                                <img src="images/quarter/06-filling-pan.jpg" alt="Batter poured into cake pan." aria-describedby="filling-pan-mob" loading="lazy">
+                            </picture>
+                            <p class="picture-description" id="filling-pan-mob">Batter poured into cake pan</p>
+                        </div>
+                        <br>
+                        <div>    
+                            <picture>
+                                <source srcset="images/full/12-checking-cake.jpg" media="(min-width: 680px)" />
+                                <source srcset="images/half/12-checking-cake.jpg" media="(min-width: 400px)" />
+                                <img src="images/quarter/12-checking-cake.jpg" alt="Checking the bake of the cake." aria-describedby="checking-cake-mob" loading="lazy">
+                            </picture>
+                            <p class="picture-description" id="checking-cake-mob">Checking the bake of the cake</p>
+                        </div>
+                    </div>
+                </div>
             </section>
             <hr>
             <section id="Topping">
                 <h3>Making the topping</h3>
-                <p>The topping consists of a <strong>thin-sliced apples cooked in a simple syrup</strong>.  Making the simple syrup:</p>
-                <ol>
-                    <li><span class="symbol">🫖</span>&nbsp;<strong>Boil water</strong> on high in a quart pot</li>
-                    <li><span class="symbol">🗡</span>&nbsp;<strong>Thinly slice the apples</strong> while the water is boiling</li>
-                    <li><span class="symbol">🪔</span>&nbsp;<strong>Add sugar</strong> to the boiling water</li>
-                    <li><span class="symbol">⏱</span>&nbsp;<strong>Simmer until clear</strong> when the sugar is dissolved</li>
-                    <li><span class="symbol">🫕</span>&nbsp;<strong>Insert cinnamon stick</strong> to infuse flavor</li>
-                    <li><span class="symbol">🌡</span>&nbsp;<strong>Reduce heat</strong> to low from high</li>
-                    <li><span class="symbol">⏱</span>&nbsp;<strong>Simmer apples</strong> until they soften</li>
-                    <li><span class="symbol">⏻</span>&nbsp;<strong>Turn off the stove</strong> and prepare to decorate</li>
-                </ol>
-                <p>Once the topping is complete, it can be added to the cake.</p>
+                <div class="table">
+                    <div class="column wide">
+                        <p>The topping consists of a <strong>thin-sliced apples cooked in a simple syrup</strong>.  Making the simple syrup:</p>
+                        <ol>
+                            <li><span class="symbol">🫖</span>&nbsp;<strong>Boil water</strong> on high in a quart pot</li>
+                            <li><span class="symbol">🗡</span>&nbsp;<strong>Thinly slice the apples</strong> while the water is boiling</li>
+                            <li><span class="symbol">🪔</span>&nbsp;<strong>Add sugar</strong> to the boiling water</li>
+                            <li><span class="symbol">⏱</span>&nbsp;<strong>Simmer until clear</strong> when the sugar is dissolved</li>
+                            <li><span class="symbol">🫕</span>&nbsp;<strong>Insert cinnamon stick</strong> to infuse flavor</li>
+                            <li><span class="symbol">🌡</span>&nbsp;<strong>Reduce heat</strong> to low from high</li>
+                            <li><span class="symbol">⏱</span>&nbsp;<strong>Simmer apples</strong> until they soften</li>
+                            <li><span class="symbol">⏻</span>&nbsp;<strong>Turn off the stove</strong> and prepare to decorate</li>
+                        </ol>
+                        <p>Once the topping is complete, it can be added to the cake.</p>
+                    </div>
+                    <div class="column narrow">
+                        <div>
+                            <picture>
+                                <source srcset="images/full/08-dissolving-sugar.jpg" media="(min-width: 680px)" />
+                                <source srcset="images/half/08-dissolving-sugar.jpg" media="(min-width: 400px)" />
+                                <img src="images/quarter/8-dissolving-sugar.jpg" alt="Dissolving the sugar in water to make a simple syrup." aria-describedby="dissolving-sugar" loading="lazy">
+                            </picture>
+                            <p class="picture-description" id="dissolving-sugar">Dissolving the sugar in water to make a simple syrup.</p>
+                        </div>
+                        <br>
+                        <div>
+                            <picture>
+                                <source srcset="images/full/11-checking-apples.jpg" media="(min-width: 680px)" />
+                                <source srcset="images/half/11-checking-apples.jpg" media="(min-width: 400px)" />
+                                <img src="images/quarter/11-checking-apples.jpg" alt="Checking the cook of the apples." aria-describedby="checking-apples" loading="lazy">
+                            </picture>
+                            <p class="picture-description" id="checking-apples">Checking the cook of the apples.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
             <hr>
             <section id="Serving">
                 <h3>Decorating and serving</h3>
-                <p>To decorate the cake:</p>
-                <ol>
-                    <li><span class="symbol">🔓</span>&nbsp;<strong>Remove the edge</strong> from the spring-form pan</li>
-                    <li><span class="symbol">🌢</span>&nbsp;<strong>Apply syrup</strong> to the cake by using a spoon or brush</li>
-                    <li><span class="symbol">🏵</span>&nbsp;<strong>Lay out apples</strong> in a pattern atop the cake</li>
-                    <li><span class="symbol">🪥</span>&nbsp;<strong>Brush syrup onto apples</strong> to great a glistening look</li>
-                    <li><span class="symbol">🗡</span>&nbsp;<strong>Slice</strong> into desired amount of pieces</li> 
-                </ol>
-                <p>The cake may be enjoyed on its own or à la mode (topped with ice cream).  It goes nicely with a glass of milk or cider.</p>
+                <div class="table">
+                    <div class="column narrow mob-hid">
+                        <div>
+                            <picture>
+                                <source srcset="images/full/14-removing-cake.jpg" media="(min-width: 680px)" />
+                                <source srcset="images/half/14-removing-cake.jpg" media="(min-width: 400px)" />
+                                <img src="images/quarter/14-removing-cake.jpg" alt="Removing cake from the pan." aria-describedby="removing-cake" loading="lazy">
+                            </picture>
+                            <p class="picture-description" id="removing-cake">Removing cake from the pan</p>
+                        </div>
+                        <br>
+                        <div>
+                            <picture>
+                                <source srcset="images/full/16-placing-apples-2.jpg" media="(min-width: 680px)" />
+                                <source srcset="images/half/16-placing-apples-2.jpg" media="(min-width: 400px)" />
+                                <img src="images/quarter/16-placing-apples-2.jpg" alt="Placing apples on the cake." aria-describedby="placing-apples" loading="lazy">
+                            </picture>
+                            <p class="picture-description" id="placing-apples">Placing apples on the cake</p>
+                        </div>
+                        <br>
+                        <div>
+                            <picture>
+                                <source srcset="images/full/18-glazing.jpg" media="(min-width: 680px)" />
+                                <source srcset="images/half/18-glazing.jpg" media="(min-width: 400px)" />
+                                <img src="images/quarter/18-glazing.jpg" alt="Glazing the cake with the simple syrup." aria-describedby="glazing" loading="lazy">
+                            </picture>
+                            <p class="picture-description" id="glazing">Glazing the cake with the simple syrup</p>
+                        </div>
+                    </div>
+                    <div class="column wide">
+                        <p>To decorate the cake:</p>
+                        <ol>
+                            <li><span class="symbol">🔓</span>&nbsp;<strong>Remove the edge</strong> from the spring-form pan</li>
+                            <li><span class="symbol">🌢</span>&nbsp;<strong>Apply syrup</strong> to the cake by using a spoon or brush</li>
+                            <li><span class="symbol">🏵</span>&nbsp;<strong>Lay out apples</strong> in a pattern atop the cake</li>
+                            <li><span class="symbol">🪥</span>&nbsp;<strong>Brush syrup onto apples</strong> to great a glistening look</li>
+                            <li><span class="symbol">🗡</span>&nbsp;<strong>Slice</strong> into desired amount of pieces</li> 
+                        </ol>
+                        <p>The cake may be enjoyed on its own or à la mode (topped with ice cream).  It goes nicely with a glass of milk or cider.</p>
+                    </div>
+                    <div class="column narrow mob-vis">
+                        <div>
+                            <picture>
+                                <source srcset="images/full/14-removing-cake.jpg" media="(min-width: 680px)" />
+                                <source srcset="images/half/14-removing-cake.jpg" media="(min-width: 400px)" />
+                                <img src="images/quarter/14-removing-cake.jpg" alt="Removing cake from the pan." aria-describedby="removing-cake-mob" loading="lazy">
+                            </picture>
+                            <p class="picture-description" id="removing-cake-mob">Removing cake from the pan</p>
+                        </div>
+                        <br>
+                        <div>
+                            <picture>
+                                <source srcset="images/full/16-placing-apples-2.jpg" media="(min-width: 680px)" />
+                                <source srcset="images/half/16-placing-apples-2.jpg" media="(min-width: 400px)" />
+                                <img src="images/quarter/16-placing-apples-2.jpg" alt="Placing apples on the cake." aria-describedby="placing-apples-mob" loading="lazy">
+                            </picture>
+                            <p class="picture-description" id="placing-apples-mob">Placing apples on the cake</p>
+                        </div>
+                        <br>
+                        <div>
+                            <picture>
+                                <source srcset="images/full/18-glazing.jpg" media="(min-width: 680px)" />
+                                <source srcset="images/half/18-glazing.jpg" media="(min-width: 400px)" />
+                                <img src="images/quarter/18-glazing.jpg" alt="Glazing the cake with the simple syrup." aria-describedby="glazing-mob" loading="lazy">
+                            </picture>
+                            <p class="picture-description" id="glazing-mob">Glazing the cake with the simple syrup</p>
+                        </div>
+                    </div>
+                </div>
             </section>
             <hr>
             <section id="Remarks">
